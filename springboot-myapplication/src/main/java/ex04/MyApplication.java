@@ -1,0 +1,24 @@
+package ex04;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+ /**
+  * 
+  * @SpringBootApplication 메타 어노테이션
+  * 
+  * + @SpringBootConfiguration: 참고)ex01, ex02 
+  *	+ @ComponentScan : ex04 하부 패키지를 스캐닝한다. 참고)ex03
+  * + @EnableAutoConfiguration:
+  * 	1.MVC ,AOP, Security,JPA 등을 자동 "default"로 (***미세 설정 필수 ***)설정
+  * 	2.발견된  Starter Dependency(Library)기반으로 설정한다.
+  * 
+  * 
+  */
+
+@SpringBootApplication
+public class MyApplication {
+	public static void mait(String[] args) {
+		try(ConfigurableApplicationContext ac =SpringApplication.run(MyApplication.class,args)){}
+	}
+}
